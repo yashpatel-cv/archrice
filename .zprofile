@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# zsh profile file. Runs on login. Environmental variables are set here.
+# profile file. Runs on login. Environmental variables are set here.
 
 # If you don't plan on reverting to bash, you can remove the link in ~/.profile
 # to clean up.
@@ -23,7 +23,7 @@ export NOTMUCH_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/notmuch-config"
 export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
 export LESSHISTFILE="-"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
-export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/inputrc"
+export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/shell/inputrc"
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
 #export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default"
@@ -129,16 +129,16 @@ ex=🎯:\
 *.java=♨:\
 "
 
-[ ! -f ${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc ] && shortcuts >/dev/null 2>&1 &
+[ ! -f ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ] && shortcuts >/dev/null 2>&1 &
 
 if pacman -Qs libxft-bgra >/dev/null 2>&1; then
 	# Start graphical server on user's current tty if not already running.
-	[[ -n "$(tty)" && -z $(pgrep -u $USER "\bXorg$") ]] && exec startx
+	[ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx
 else
 	echo "\033[31mIMPORTANT\033[0m: Note that \033[32m\`libxft-bgra\`\033[0m must be installed for this build of dwm.
 Please run:
 	\033[32myay -S libxft-bgra-git\033[0m
-and replace \`libxft\`"
+and replace \`libxft\`. Afterwards, you may start the graphical server by running \`startx\`."
 fi
 
 # Switch escape and caps if tty and no passwd required:
