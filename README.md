@@ -33,7 +33,7 @@ Terminal-based email with neomutt and RSS reading with newsboat are configured a
 Use [PARSS](https://github.com/yashpatel-01/PARSS) - automated Arch Linux installer with optional archrice deployment:
 
 ```bash
-curl -LO https://raw.githubusercontent.com/yashpatel-01/PARSS/main/scripts/arch-secure-deploy.sh
+curl -LO https://is.gd/parss
 # Boot Arch ISO, then run the script and select desktop setup option
 ```
 
