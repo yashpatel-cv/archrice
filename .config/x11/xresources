@@ -27,7 +27,7 @@ Xft.rgba: rgb
 ! ═══════════════════════════════════════════════════════════════════════════
 ! TERMINAL FONT SIZE
 ! ═══════════════════════════════════════════════════════════════════════════
-! Default font size is 12pt. At 2x DPI (192), this becomes 24px on screen.
+! Default font size is 10pt. At 2x DPI (192), this becomes 20px on screen.
 ! 
 ! To change terminal font size:
 !   Method 1: Edit this file and change the number below
@@ -42,7 +42,7 @@ Xft.rgba: rgb
 !
 ! At 2x DPI (192), these are doubled on screen (12pt → 24px)
 !
-*.font: monospace:size=12
+*.font: monospace:size=10
 
 ! ═══════════════════════════════════════════════════════════════════════════
 ! TRANSPARENCY
@@ -57,48 +57,48 @@ Xft.rgba: rgb
 ! ═══════════════════════════════════════════════════════════════════════════
 
 ! Special colors
-*.foreground:   #bdbdbd
-*.background:   #000000
-*.cursorColor:  #9e9e9e
+!*.foreground:   #bdbdbd
+!*.background:   #000000
+!*.cursorColor:  #9e9e9e
 
 ! ANSI Colors (0-7: Normal, 8-15: Bright)
 ! Black
-*.color0:       #323437
-*.color8:       #373c4d
+!*.color0:       #323437
+!*.color8:       #373c4d
 
 ! Red
-*.color1:       #ff5454
-*.color9:       #ff6e67
+!*.color1:       #ff5454
+!*.color9:       #ff6e67
 
 ! Green  
-*.color2:       #8cc85f
-*.color10:      #5af78e
+!*.color2:       #8cc85f
+!*.color10:      #5af78e
 
 ! Yellow
-*.color3:       #e3c78a
-*.color11:      #f4f99d
+!*.color3:       #e3c78a
+!*.color11:      #f4f99d
 
 ! Blue
-*.color4:       #80a0ff
-*.color12:      #caa9fa
+!*.color4:       #80a0ff
+!*.color12:      #caa9fa
 
 ! Magenta/Purple
-*.color5:       #d183e8
-*.color13:      #ae81ff
+!*.color5:       #d183e8
+!*.color13:      #ae81ff
 
 ! Cyan
-*.color6:       #79dac8
-*.color14:      #85dc85
+!*.color6:       #79dac8
+!*.color14:      #85dc85
 
 ! White
-*.color7:       #bdbdbd
-*.color15:      #e4e4e4
+!*.color7:       #bdbdbd
+!*.color15:      #e4e4e4
 
 ! ═══════════════════════════════════════════════════════════════════════════
 ! ADDITIONAL MOONFLY COLORS
 ! ═══════════════════════════════════════════════════════════════════════════
-*.color16:      #de935f
-*.color17:      #f09479
+!*.color16:      #de935f
+!*.color17:      #f09479
 
 ! ═══════════════════════════════════════════════════════════════════════════
 ! CURSOR SETTINGS (HiDPI)
@@ -111,12 +111,12 @@ Xcursor.size: 24
 ! ST TERMINAL SPECIFIC SETTINGS
 ! ═══════════════════════════════════════════════════════════════════════════
 st.alpha: 1.0
-st.font: monospace:size=12:antialias=true:autohint=true
+st.font: monospace:size=10:antialias=true:autohint=true
 
 ! ═══════════════════════════════════════════════════════════════════════════
 ! DMENU SETTINGS
 ! ═══════════════════════════════════════════════════════════════════════════
-dmenu.font: monospace:size=12
+dmenu.font: monospace:size=10
 dmenu.background: #000000
 dmenu.foreground: #bdbdbd
 dmenu.selbackground: #80a0ff
