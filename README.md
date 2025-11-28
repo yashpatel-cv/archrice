@@ -44,6 +44,44 @@ curl -LO larbs.xyz/larbs.sh
 or clone the repo files directly to your home directory and install the
 [dependencies](https://github.com/LukeSmithxyz/LARBS/blob/master/static/progs.csv).
 
+## Pushing Config Changes
+
+After customizing your dotfiles, push changes safely:
+
+1. **Check what changed:**
+   ```bash
+   git status
+   git diff              # Review actual changes
+   ```
+
+2. **Stage only config files** (avoid cache/history/binaries):
+   ```bash
+   git add .config/x11/xresources          # Example: X settings
+   git add .config/nvim/init.vim           # Example: Neovim config
+   git add .local/bin/your-script          # Example: Custom script
+   ```
+
+3. **Commit with clear message:**
+   ```bash
+   git commit -m "Config: update font size in xresources"
+   ```
+
+4. **Push and verify:**
+   ```bash
+   git push origin master
+   git log --oneline -3      # Confirm commit appears
+   git status                # Should show "nothing to commit"
+   ```
+
+**Files to avoid pushing:**
+- Cache: `.cache/*`, `.mozilla/firefox/*/cache2/*`
+- History: `.zsh_history`, `.bash_history`, `.lesshst`
+- Passwords: `.local/share/password-store/*` (unless encrypted)
+- Build artifacts: `*.o`, `*.so`, compiled suckless programs
+- Thumbnails: `.thumbnails/*`, `.cache/thumbnails/*`
+
+**Pro tip:** Use `git add -p` to review and stage changes interactively, or `git diff --name-only` to see only filenames.
+
 ## Default Desktop Artwork
 
 Thomas Thiemeyer's *The Road to Samarkand* ([fb](https://www.facebook.com/t.thiemeyer/), [insta](https://www.instagram.com/tthiemeyer/), [shop](https://www.redbubble.com/de/people/TThiemeyer/shop))
