@@ -9,22 +9,13 @@
 ! ═══════════════════════════════════════════════════════════════════════════
 ! FONT RENDERING (HiDPI/4K SUPPORT)
 ! ═══════════════════════════════════════════════════════════════════════════
-! Note: Xft.dpi will be auto-detected and set by the installer based on
-! your screen resolution. Default is 96 (standard 1080p), 144 (1.5x), or
-! 192 (2x for 4K displays).
-!
-! To manually change DPI after installation:
-!   1. Edit this file: ~/.config/x11/xresources
-!   2. Uncomment and set: Xft.dpi: 192
-!   3. Run: xrdb ~/.config/x11/xresources
-!   4. Restart X (logout/login or reboot)
-!
-! Common DPI values:
-!   - 96  = 1x (1080p, 1440p standard)
+! DPI Scaling for HiDPI/4K displays:
+!   - 96  = 1x (standard 1080p, 1440p)
 !   - 144 = 1.5x (4K with more screen space)
-!   - 192 = 2x (4K with larger text/UI)
+!   - 192 = 2x (4K with larger UI elements)
 !
-! Xft.dpi: 96
+! Set based on your screen resolution:
+! Xft.dpi: 192
 
 Xft.autohint: 0
 Xft.lcdfilter: lcddefault

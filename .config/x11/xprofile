@@ -3,16 +3,10 @@
 # This file runs when a DM logs you into a graphical session.
 # If you use startx/xinit like a Chad, this file will also be sourced.
 
-# Load Moonfly OLED colors and Xresources settings
+# Load Moonfly OLED colors from Xresources
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!
 
-# Auto-detect and set DPI for HiDPI displays (no action if already set)
-# This will detect 4K/HiDPI screens and configure appropriate scaling
-command -v detect-hidpi >/dev/null 2>&1 && detect-hidpi >/dev/null 2>&1 &
-
-# Set OLED black wallpaper
-# Default wallpaper link will be created during installation
-# To change: run `setbg /path/to/image.png`
+# Set wallpaper (uses ~/.local/share/bg)
 setbg &
 
 autostart="mpd xcompmgr dunst unclutter pipewire remapd"
