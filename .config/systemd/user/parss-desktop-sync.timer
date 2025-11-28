@@ -1,0 +1,9 @@
+[Unit]
+Description=Run PARSS desktop sync daily
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=1d
+
+[Install]
+WantedBy=timers.target

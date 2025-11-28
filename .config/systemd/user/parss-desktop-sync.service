@@ -1,0 +1,6 @@
+[Unit]
+Description=PARSS desktop sync (archrice + progs.csv)
+
+[Service]
+Type=oneshot
+ExecStart=%h/PARSS/scripts/desktop-setup.sh
