@@ -30,23 +30,26 @@ Terminal-based email with neomutt and RSS reading with newsboat are configured a
 
 ## Install these dotfiles and all dependencies
 
-One-line installation:
+Use [PARSS](https://github.com/yashpatel-01/PARSS) - automated Arch Linux installer with optional archrice deployment:
 
 ```bash
-curl -LO https://raw.githubusercontent.com/yashpatel-01/archrice/master/install.sh && sh install.sh
+curl -LO https://raw.githubusercontent.com/yashpatel-01/PARSS/main/scripts/arch-secure-deploy.sh
+# Boot Arch ISO, then run the script and select desktop setup option
 ```
 
-This will clone the repo, install all packages from `progs.csv`, and deploy dotfiles to your home directory.
+PARSS installs:
+- Complete Arch Linux base system (LUKS2 encryption, BTRFS, security hardening)
+- Optional desktop environment (dwm, st, dmenu via Phase 14)
+- All packages from archrice/progs.csv
+- Archrice dotfiles deployment
 
-Or manually:
+For manual dotfiles-only installation on existing Arch systems:
 
 ```bash
 git clone https://github.com/yashpatel-01/archrice.git ~/.local/src/archrice
 cd ~/.local/src/archrice
-# Review progs.csv and install packages manually, then copy configs
+# Review progs.csv, install packages manually, then copy configs to ~
 ```
-
-Or use with [PARSS](https://github.com/yashpatel-01/PARSS) full system installer (includes base Arch installation).
 
 ## Pushing Config Changes
 
