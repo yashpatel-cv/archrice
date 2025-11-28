@@ -1,4 +1,4 @@
-# Luke's config for the Zoomer Shell
+# Zsh configuration
 
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors

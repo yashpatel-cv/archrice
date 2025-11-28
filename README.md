@@ -1,7 +1,6 @@
-# The Voidrice (Patel <https://lukesmith.xyz>'s dotfiles)
+# Archrice - Patel's Arch Linux Dotfiles
 
-These are the dotfiles deployed by [LARBS](https://larbs.xyz) and as seen on
-[my YouTube channel](https://youtube.com/c/lukesmithxyz).
+Minimalist terminal-centric dotfiles for Arch Linux featuring a suckless software stack (dwm, st, dmenu) with zsh, neovim, and productivity tools.
 
 - Very useful scripts are in `~/.local/bin/`
 - Settings for:
@@ -21,28 +20,23 @@ These are the dotfiles deployed by [LARBS](https://larbs.xyz) and as seen on
 
 ## Usage
 
-These dotfiles are intended to go with numerous suckless programs I use:
+These dotfiles are intended to go with suckless programs:
 
-- [dwm](https://github.com/lukesmithxyz/dwm) (window manager)
-- [dwmblocks](https://github.com/lukesmithxyz/dwmblocks) (statusbar)
-- [st](https://github.com/lukesmithxyz/st) (terminal emulator)
+- [dwm](https://github.com/yashpatel-01/dwm) (window manager)
+- [dwmblocks](https://github.com/yashpatel-01/dwmblocks) (statusbar)
+- [st](https://github.com/yashpatel-01/st) (terminal emulator)
 
-I also recommend trying out
-[mutt-wizard](https://github.com/lukesmithxyz/mutt-wizard), which additionally
-works with this setup. It gives you an easy-to-install terminal-based email
-client regardless of your email provider. It is integrated into these dotfiles
-as well.
+Terminal-based email with neomutt and RSS reading with newsboat are configured and ready to use.
 
 ## Install these dotfiles and all dependencies
 
-Use [LARBS](https://larbs.xyz) to autoinstall everything:
+Install via PARSS installer (includes optional archrice deployment) or manually:
 
+```bash
+git clone https://github.com/yashpatel-01/archrice.git
+cd archrice
+# Install dependencies from progs.csv (see PARSS for automated installation)
 ```
-curl -LO larbs.xyz/larbs.sh
-```
-
-or clone the repo files directly to your home directory and install the
-[dependencies](https://github.com/LukeSmithxyz/LARBS/blob/master/static/progs.csv).
 
 ## Pushing Config Changes
 
