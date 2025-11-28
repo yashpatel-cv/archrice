@@ -30,27 +30,23 @@ Terminal-based email with neomutt and RSS reading with newsboat are configured a
 
 ## Install these dotfiles and all dependencies
 
-Quick install (similar to LARBS):
+One-line installation:
 
 ```bash
-curl -LO https://raw.githubusercontent.com/yashpatel-01/PARSS/main/scripts/arch-secure-deploy.sh
-# Run Phase 14 for desktop setup (includes archrice deployment)
+curl -LO https://raw.githubusercontent.com/yashpatel-01/archrice/master/install.sh && sh install.sh
 ```
 
-Or use [LARBS](https://larbs.xyz) to autoinstall everything:
+This will clone the repo, install all packages from `progs.csv`, and deploy dotfiles to your home directory.
+
+Or manually:
 
 ```bash
-curl -LO larbs.xyz/larbs.sh
-# Then run: bash larbs.sh
+git clone https://github.com/yashpatel-01/archrice.git ~/.local/src/archrice
+cd ~/.local/src/archrice
+# Review progs.csv and install packages manually, then copy configs
 ```
 
-Or manually clone and install:
-
-```bash
-git clone https://github.com/yashpatel-01/archrice.git
-cd archrice
-# Install dependencies from progs.csv (see PARSS or LARBS for automated installation)
-```
+Or use with [PARSS](https://github.com/yashpatel-01/PARSS) full system installer (includes base Arch installation).
 
 ## Pushing Config Changes
 
