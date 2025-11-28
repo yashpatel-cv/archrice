@@ -22,20 +22,34 @@ Minimalist terminal-centric dotfiles for Arch Linux featuring a suckless softwar
 
 These dotfiles are intended to go with suckless programs:
 
-- [dwm](https://github.com/yashpatel-01/dwm) (window manager)
-- [dwmblocks](https://github.com/yashpatel-01/dwmblocks) (statusbar)
-- [st](https://github.com/yashpatel-01/st) (terminal emulator)
+- dwm (window manager)
+- dwmblocks (statusbar)
+- st (terminal emulator)
 
 Terminal-based email with neomutt and RSS reading with newsboat are configured and ready to use.
 
 ## Install these dotfiles and all dependencies
 
-Install via PARSS installer (includes optional archrice deployment) or manually:
+Quick install (similar to LARBS):
+
+```bash
+curl -LO https://raw.githubusercontent.com/yashpatel-01/PARSS/main/scripts/arch-secure-deploy.sh
+# Run Phase 14 for desktop setup (includes archrice deployment)
+```
+
+Or use [LARBS](https://larbs.xyz) to autoinstall everything:
+
+```bash
+curl -LO larbs.xyz/larbs.sh
+# Then run: bash larbs.sh
+```
+
+Or manually clone and install:
 
 ```bash
 git clone https://github.com/yashpatel-01/archrice.git
 cd archrice
-# Install dependencies from progs.csv (see PARSS for automated installation)
+# Install dependencies from progs.csv (see PARSS or LARBS for automated installation)
 ```
 
 ## Pushing Config Changes
