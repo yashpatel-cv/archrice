@@ -19,10 +19,12 @@ Plug 'vimwiki/vimwiki'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
+Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
 call plug#end()
 
 set title
-set bg=light
+set bg=dark
+set termguicolors
 set mouse=a
 set nohlsearch
 set clipboard+=unnamedplus
@@ -30,7 +32,10 @@ set noshowmode
 set noruler
 set laststatus=0
 set noshowcmd
-colorscheme vim
+
+" Moonfly OLED theme configuration
+colorscheme moonfly
+let g:moonflyTransparent = v:true
 
 " Some basics:
 	nnoremap c "_c
@@ -45,7 +50,7 @@ colorscheme vim
 " Perform dot commands over visual blocks:
 	vnoremap . :normal .<CR>
 " Goyo plugin makes text more readable when writing prose:
-	map <leader>f :Goyo \| set bg=light \| set linebreak<CR>
+	map <leader>f :Goyo \| set bg=dark \| set linebreak<CR>
 " Spell-check set to <leader>o, 'o' for 'orthography':
 	map <leader>o :setlocal spell! spelllang=en_us<CR>
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.

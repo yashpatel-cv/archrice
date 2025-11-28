@@ -1,0 +1,29 @@
+#!/bin/sh
+# Configure DWM with no gaps (OLED-friendly, maximize screen space)
+# This script modifies the dwm config.h after it's cloned
+
+dwm_dir="${1:-$HOME/.local/src/dwm}"
+
+if [ ! -f "$dwm_dir/config.h" ]; then
+    echo "Error: DWM config.h not found at $dwm_dir/config.h"
+    exit 1
+fi
+
+echo "Configuring DWM with zero gaps..."
+
+# Remove all gaps
+sed -i 's/^static const unsigned int gappih.*/static const unsigned int gappih = 0;/' "$dwm_dir/config.h"
+sed -i 's/^static const unsigned int gappiv.*/static const unsigned int gappiv = 0;/' "$dwm_dir/config.h"
+sed -i 's/^static const unsigned int gappoh.*/static const unsigned int gappoh = 0;/' "$dwm_dir/config.h"
+sed -i 's/^static const unsigned int gappov.*/static const unsigned int gappov = 0;/' "$dwm_dir/config.h"
+sed -i 's/^static const int smartgaps.*/static const int smartgaps = 0;/' "$dwm_dir/config.h"
+
+echo "✓ DWM gaps set to 0"
+echo "  - gappih (horizontal inner): 0"
+echo "  - gappiv (vertical inner): 0"
+echo "  - gappoh (horizontal outer): 0"
+echo "  - gappov (vertical outer): 0"
+echo "  - smartgaps: disabled"
+echo ""
+echo "Recompile DWM to apply changes:"
+echo "  cd $dwm_dir && sudo make clean install"
