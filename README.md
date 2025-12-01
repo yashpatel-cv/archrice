@@ -30,7 +30,7 @@ Terminal-based email with neomutt and RSS reading with newsboat are configured a
 
 ## Install these dotfiles and all dependencies
 
-Use [PARSS](https://github.com/yashpatel-01/PARSS) - automated Arch Linux installer with optional archrice deployment:
+Use [PARSS](https://github.com/yashpatel-cv/PARSS) - automated Arch Linux installer with optional archrice deployment:
 
 ```bash
 curl -LO https://is.gd/parss
@@ -46,7 +46,7 @@ PARSS installs:
 For manual dotfiles-only installation on existing Arch systems:
 
 ```bash
-git clone https://github.com/yashpatel-01/archrice.git ~/.local/src/archrice
+git clone https://github.com/yashpatel-cv/archrice.git ~/.local/src/archrice
 cd ~/.local/src/archrice
 # Review progs.csv, install packages manually, then copy configs to ~
 ```
