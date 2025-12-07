@@ -1,0 +1,21 @@
+Git Timeline Helper metadata (re-date)
+Generated at: 2025-12-01T03:08:02.530703
+
+[Source]
+  Repo:          Y:\mega\projects\personal\archrice
+  Source branch: main
+  Target branch: main
+
+[Timeline]
+  Start date:    2017-06-02
+  End date:      2025-12-01
+  Commits/week:  None
+  Excluded weekdays: (none)
+
+[Options]
+  Origin URL:    https://github.com/yashpatel-01/archrice
+  Verify trees:  yes
+  Identity override: name='Yash Patel', email='yashpatel1503@gmail.com'
+
+[Replay command]
+"C:\Users\yashp\AppData\Local\Programs\Python\Python39\python.exe" "Y:\mega\projects\personal\git_timeline_helper\timeline_redater.py" "--repo" "Y:\mega\projects\personal\archrice" "--target" "Y:\mega\projects\personal\archrice-texp" "--branch-name" "main" "--start-date" "02-06-2017" "--end-date" "01-12-2025" "--origin" "https://github.com/yashpatel-01/archrice" "--force-target" "--verify" "--identity-name" "Yash Patel" "--identity-email" "yashpatel1503@gmail.com"
