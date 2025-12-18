@@ -33,9 +33,11 @@ set noruler
 set laststatus=0
 set noshowcmd
 
-" Moonfly OLED theme configuration
-colorscheme moonfly
+" Moonfly OLED theme configuration - settings MUST come before colorscheme
 let g:moonflyTransparent = v:true
+let g:moonflyNormalFloat = v:true
+let g:moonflyWinSeparator = 2
+colorscheme moonfly
 
 " Some basics:
 	nnoremap c "_c
