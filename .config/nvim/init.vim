@@ -33,7 +33,7 @@ set noruler
 set laststatus=0
 set noshowcmd
 
-" Moonfly OLED theme configuration - settings MUST come before colorscheme
+" Moonfly theme configuration - settings MUST come before colorscheme
 let g:moonflyTransparent = v:true
 let g:moonflyNormalFloat = v:true
 let g:moonflyWinSeparator = 2

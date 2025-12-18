@@ -3,13 +3,13 @@
 # This file runs when a DM logs you into a graphical session.
 # If you use startx/xinit like a Chad, this file will also be sourced.
 
-# Load Moonfly OLED colors from Xresources
+# Load Moonfly colors from Xresources
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!
 
 # Set wallpaper (uses ~/.local/share/bg)
 setbg &
 
-autostart="mpd xcompmgr dunst unclutter pipewire remapd"
+autostart="mpd xcompmgr dunst unclutter pipewire remapd dwmblocks"
 
 for program in $autostart; do
 	pidof -sx "$program" || "$program" &
