@@ -1,9 +1,9 @@
 ! ═══════════════════════════════════════════════════════════════════════════
-! MOONFLY OLED - Pure Black Theme for OLED Displays
+! MOONFLY DARK THEME - Optimized for High-DPI IPS Displays
 ! ═══════════════════════════════════════════════════════════════════════════
 ! Based on: https://github.com/bluz71/vim-moonfly-colors
-! Optimized for: AMOLED/OLED displays with true black (#000000)
-! Pure black pixels = OFF pixels = Zero power consumption
+! Optimized for: ThinkPad P1 Gen5 16" WQUXGA (3840x2400) IPS 600nits
+!                100% Adobe RGB, X-Rite Factory Calibrated, HDR400
 ! ═══════════════════════════════════════════════════════════════════════════
 
 ! ═══════════════════════════════════════════════════════════════════════════
@@ -47,18 +47,20 @@ Xft.rgba: rgb
 ! ═══════════════════════════════════════════════════════════════════════════
 ! TRANSPARENCY
 ! ═══════════════════════════════════════════════════════════════════════════
-! Note: Transparency reduces OLED power savings! Set to 1.0 for pure black.
-! For OLED displays, transparency is disabled (alpha=1.0) to maximize
-! the benefit of black pixels being completely off.
-*.alpha: 1.0
+! For IPS displays, transparency is purely aesthetic (no power impact).
+! Set alpha between 0.8-1.0 based on preference:
+!   - 1.0 = fully opaque (solid background)
+!   - 0.9 = subtle transparency
+!   - 0.8 = noticeable transparency (default for aesthetics)
+*.alpha: 0.85
 
 ! ═══════════════════════════════════════════════════════════════════════════
-! MOONFLY OLED COLOR SCHEME
+! MOONFLY DARK COLOR SCHEME
 ! ═══════════════════════════════════════════════════════════════════════════
 
-! Special colors (OLED optimized - pure black background)
+! Special colors (dark theme for comfortable viewing on bright IPS)
 *.foreground:   #bdbdbd
-*.background:   #000000
+*.background:   #080808
 *.cursorColor:  #9e9e9e
 
 ! ANSI Colors (0-7: Normal, 8-15: Bright)
@@ -110,14 +112,14 @@ Xcursor.size: 24
 ! ═══════════════════════════════════════════════════════════════════════════
 ! ST TERMINAL SPECIFIC SETTINGS
 ! ═══════════════════════════════════════════════════════════════════════════
-st.alpha: 1.0
+st.alpha: 0.85
 st.font: monospace:size=10:antialias=true:autohint=true
 
 ! ═══════════════════════════════════════════════════════════════════════════
 ! DMENU SETTINGS
 ! ═══════════════════════════════════════════════════════════════════════════
 dmenu.font: monospace:size=10
-dmenu.background: #000000
+dmenu.background: #080808
 dmenu.foreground: #bdbdbd
 dmenu.selbackground: #80a0ff
 dmenu.selforeground: #000000
