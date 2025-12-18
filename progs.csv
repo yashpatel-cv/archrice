@@ -84,3 +84,12 @@ A,mutt-wizard-git,"is a light-weight terminal-based email system."
 ,moreutils,"is a collection of useful unix tools."
 ,tesseract,"command-line OCR engine for advance maimpick"
 ,tesseract-data-eng,"english language pack for OCR"
+#
+# LAPTOP/THINKPAD SUPPORT (fan control, power management)
+#
+A,thinkfan,"provides intelligent fan control for ThinkPad laptops."
+,lm_sensors,"provides hardware monitoring and temperature sensors."
+,acpi,"displays battery status and other ACPI information."
+,tlp,"optimizes laptop battery life and power management."
+,acpid,"handles ACPI events like lid close and power button."
+,thermald,"prevents overheating on Intel CPUs."

@@ -9,7 +9,7 @@ xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!
 # Set wallpaper (uses ~/.local/share/bg)
 setbg &
 
-autostart="mpd xcompmgr dunst unclutter pipewire remapd"
+autostart="mpd xcompmgr dunst unclutter pipewire remapd dwmblocks"
 
 for program in $autostart; do
 	pidof -sx "$program" || "$program" &
