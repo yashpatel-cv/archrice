@@ -85,11 +85,6 @@ A,mutt-wizard-git,"is a light-weight terminal-based email system."
 ,tesseract,"command-line OCR engine for advance maimpick"
 ,tesseract-data-eng,"english language pack for OCR"
 #
-# LAPTOP/THINKPAD SUPPORT (fan control, power management)
-#
-A,thinkfan,"provides intelligent fan control for ThinkPad laptops."
-,lm_sensors,"provides hardware monitoring and temperature sensors."
-,acpi,"displays battery status and other ACPI information."
-,tlp,"optimizes laptop battery life and power management."
-,acpid,"handles ACPI events like lid close and power button."
-,thermald,"prevents overheating on Intel CPUs."
+# NOTE: Laptop packages (thinkfan, tlp, thermald, acpid) are installed
+# via PARSS Phase 15 (Laptop Configuration) instead of here.
+# This keeps the package list clean for desktop users.
