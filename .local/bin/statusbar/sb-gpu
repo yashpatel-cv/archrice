@@ -1,0 +1,23 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+    1) notify-send "🎮 GPU" "$(nvidia-smi --query-compute-apps=pid,name,used_memory --format=csv,noheader 2>/dev/null || echo 'No GPU processes')" ;;
+    2) setsid -f "$TERMINAL" -e nvidia-smi >/dev/null 2>&1 ;;
+    3) notify-send "🎮 GPU" "Shows GPU temp and usage\nLeft: processes\nMiddle: nvidia-smi" ;;
+    6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" >/dev/null 2>&1 ;;
+esac
+
+if command -v nvidia-smi >/dev/null 2>&1; then
+    stats=$(nvidia-smi --query-gpu=temperature.gpu,utilization.gpu --format=csv,noheader,nounits 2>/dev/null | head -n1)
+    temp=$(echo "$stats" | cut -d',' -f1 | tr -d ' ')
+    usage=$(echo "$stats" | cut -d',' -f2 | tr -d ' ')
+    [ -n "$temp" ] && [ -n "$usage" ] && echo "🌡${temp}°C 🎮${usage}%" || echo "🎮N/A"
+elif command -v radeontop >/dev/null 2>&1; then
+    usage=$(timeout 0.5s radeontop -d - -l 1 2>/dev/null | grep -oP 'gpu \K[0-9]+' | head -n1)
+    [ -n "$usage" ] && echo "🎮${usage}%" || echo "🎮N/A"
+elif [ -f /sys/class/drm/card0/device/gpu_busy_percent ]; then
+    usage=$(cat /sys/class/drm/card0/device/gpu_busy_percent 2>/dev/null)
+    [ -n "$usage" ] && echo "🎮${usage}%" || echo "🎮N/A"
+else
+    echo "🎮N/A"
+fi
